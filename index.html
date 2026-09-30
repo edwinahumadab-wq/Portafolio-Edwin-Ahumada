@@ -1,210 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio Profesional - Edwin Leopoldo Ahumada Bohórquez</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portafolio | Edwin Ahumada</title>
   <style>
-    :root {
-      --primary: #1e3a8a;
-      --primary-hover: #1e40af;
-      --accent: #2563eb;
-      --text: #0f172a;
-      --text-muted: #475569;
-      --bg: #f8fafc;
-      --card-bg: #ffffff;
-      --border: #e2e8f0;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; padding: 20px 10px; }
-    .wrap { max-width: 960px; margin: 0 auto; }
-    .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-    .eyebrow { font-size: 0.875rem; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
-    h1 { font-size: 2.25rem; font-weight: 800; margin-bottom: 12px; color: var(--text); }
-    h2 { font-size: 1.5rem; font-weight: 700; color: var(--primary); margin-bottom: 16px; border-bottom: 2px solid var(--border); padding-bottom: 8px; }
-    p { color: var(--text-muted); font-size: 1rem; margin-bottom: 16px; }
-    
-    /* BOTONES Y ACCIONES */
-    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
-    .btn-cv { display: inline-flex; align-items: center; gap: 8px; background-color: var(--accent); color: #fff; padding: 12px 24px; font-weight: 600; text-decoration: none; border-radius: 8px; transition: background-color 0.2s ease; }
-    .btn-cv:hover { background-color: var(--primary-hover); }
-    .btn-outline { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--border); color: var(--text); padding: 12px 24px; font-weight: 600; text-decoration: none; border-radius: 8px; background: #fff; }
-    .btn-outline:hover { background: #f1f5f9; }
-
-    /* METRICAS Y METADATA */
-    .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0; }
-    .metric-card { background: #f1f5f9; border-left: 4px solid var(--accent); padding: 16px; border-radius: 6px; }
-    .metric-num { font-size: 1.75rem; font-weight: 800; color: var(--primary); }
-    .metric-label { font-size: 0.875rem; color: var(--text-muted); font-weight: 600; }
-
-    /* EXPERIENCIA Y PROYECTOS */
-    .job-item { margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px dashed var(--border); }
-    .job-item:last-child { border-bottom: none; }
-    .job-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 8px; }
-    .job-title { font-size: 1.15rem; font-weight: 700; color: var(--text); }
-    .job-company { font-weight: 600; color: var(--accent); }
-    .job-date { font-size: 0.875rem; color: var(--text-muted); }
-    .job-bullets { list-style: disc; margin-left: 20px; color: var(--text-muted); }
-    .job-bullets li { margin-bottom: 6px; }
-
-    /* HABILIDADES */
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-    .skill-card { border: 1px solid var(--border); padding: 20px; border-radius: 8px; background: #fafafa; }
-    .skill-card h3 { margin-bottom: 8px; font-size: 1.1rem; color: var(--primary); }
-    
-    .badge { display: inline-block; background: #e2e8f0; color: var(--text); padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; margin: 2px; }
+    :root{--ink:#17212b;--muted:#5d6b78;--line:#dfe6eb;--accent:#0f766e;--accent2:#134e4a;--bg:#f6f8f9;--card:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    .wrap{max-width:1100px;margin:auto;padding:32px 22px}
+    .hero{display:grid;grid-template-columns:1.5fr .8fr;gap:24px;align-items:stretch}
+    .hero,.card{background:var(--card);border:1px solid var(--line);border-radius:18px}
+    .hero{padding:34px}
+    .eyebrow{font-size:12px;letter-spacing:1.8px;text-transform:uppercase;color:var(--accent);font-weight:800}
+    .hero h1{font-size:42px;line-height:1.05;margin:10px 0 8px}
+    .hero h2{font-size:19px;font-weight:600;color:var(--muted);margin:0 0 18px}
+    .hero p{font-size:16px;line-height:1.6;margin:0;color:#34424d}
+    .contact{padding:24px;display:flex;flex-direction:column;justify-content:center}
+    .contact strong{font-size:15px}
+    .contact span{color:var(--muted);margin-top:6px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+    .card{padding:23px}
+    .card h3{margin:0 0 9px;font-size:18px}
+    .card p{margin:0;color:var(--muted);line-height:1.5}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .tag{padding:7px 10px;border-radius:999px;background:#eef6f5;color:var(--accent2);font-size:12px;font-weight:700}
+    .project{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+    .project b{display:block;margin-bottom:4px}
+    .metric{font-size:13px;color:var(--accent2);font-weight:700;margin-top:5px}
+    .wide{grid-column:1/-1}
+    .footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+    .btn{display:inline-block;margin-top:10px;text-decoration:none;color:white;background:var(--accent);padding:11px 15px;border-radius:10px;font-weight:700;text-align:center}
+    .btn:hover{background:var(--accent2)}
+    .btn-secondary{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+    .btn-secondary:hover{background:#eef6f5}
+    @media(max-width:760px){.hero,.grid{grid-template-columns:1fr}.hero h1{font-size:34px}.wide{grid-column:auto}}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    
-    <!-- PERFIL Y ENCABEZADO -->
-    <section class="card">
-      <div class="eyebrow">Portafolio Profesional</div>
-      <h1>Edwin Leopoldo Ahumada Bohórquez</h1>
-      <p style="font-size: 1.15rem; font-weight: 600; color: var(--primary);">
-        Ingeniero Industrial & Especialista en Gerencia de Proyectos
-      </p>
-      <p>
-        Más de 8 años liderando procesos de <strong>Supply Chain, Planeación de Demanda (S&OE), Abastecimiento y Business Intelligence</strong> en Colombia, Perú, Ecuador, Bolivia y Guatemala. Experto en optimización de inventarios, desarrollo de arquitecturas analíticas en Power BI, modelo MRP y toma de decisiones basadas en datos.
-      </p>
-      
-      <!-- IMPACTO / METRICAS -->
-      <div class="metrics-grid">
-        <div class="metric-card">
-          <div class="metric-num">+8 Años</div>
-          <div class="metric-label">Experiencia Profesional</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-num">+300</div>
-          <div class="metric-label">Empresas Asesoradas</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-num">-12%</div>
-          <div class="metric-label">Reducción Costos Operativos</div>
-        </div>
-        <div class="metric-card">
-          <div class="metric-num">5 Países</div>
-          <div class="metric-label">Gestión de Abastecimiento</div>
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Portafolio profesional</div>
+        <h1>Edwin Ahumada</h1>
+        <h2>Ingeniero Industrial · Especialista en Gerencia de Proyectos</h2>
+        <p>Profesional orientado a <b>Supply Chain, análisis de datos, compras y mejoramiento continuo</b>. Experiencia integrando indicadores, planeación, inventarios, proveedores y herramientas como Excel, Power BI, SAP y análisis de datos para convertir información en decisiones accionables.</p>
+        <div class="tags">
+          <span class="tag">Power BI</span>
+          <span class="tag">Supply Chain</span>
+          <span class="tag">Compras</span>
+          <span class="tag">Inventarios</span>
+          <span class="tag">Mejoramiento continuo</span>
+          <span class="tag">Gestión de proyectos</span>
         </div>
       </div>
-
-      <div class="actions">
-        <a href="CV_EDWIN AHUMADA-PL-B.pdf" download="CV_Edwin_Ahumada.pdf" class="btn-cv">
-          📄 Descargar Hoja de Vida (PDF)
-        </a>
-        <a href="https://www.linkedin.com/in/edwinahumada/" target="_blank" class="btn-outline">
-          🔗 LinkedIn Profile
-        </a>
-      </div>
+      <aside class="contact">
+        <div class="eyebrow">Perfil</div>
+        <strong>Bogotá · Disponibilidad para movilidad</strong>
+        <span>Consultoría · BI · Planeación · Abastecimiento</span>
+        
+        <!-- BOTÓN DE DESCARGA DE HOJA DE VIDA AGREGADO -->
+        <a class="btn" href="CV_EDWIN AHUMADA-PL-B.pdf" download="CV_Edwin_Ahumada.pdf">📄 Descargar Hoja de Vida</a>
+        
+        <!-- ENLACE DE LINKEDIN -->
+        <a class="btn btn-secondary" href="https://www.linkedin.com/in/edwinahumada" target="_blank" rel="noopener noreferrer">Ver mi LinkedIn</a>
+      </aside>
     </section>
 
-    <!-- EXPERIENCIA LABORAL -->
-    <section class="card">
-      <h2>Experiencia Profesional Destacada</h2>
-      
-      <div class="job-item">
-        <div class="job-header">
-          <span class="job-title">Consultor en Análisis de Datos con Power BI e IA</span>
-          <span class="job-date">Abril 2026 – Sept 2026</span>
+    <section class="grid">
+      <article class="card">
+        <h3>📊 Power BI & Análisis de Datos</h3>
+        <p>Diseño de dashboards e indicadores para transformar datos operativos en información útil para la gestión.</p>
+        <div class="project">
+          <b>Dashboard de Supply Chain</b>
+          <span>Inventarios, rotación, cobertura, nivel de servicio y quiebres.</span>
+          <div class="metric">Power Query · DAX · Modelamiento · KPIs</div>
         </div>
-        <div class="job-company">Caja de Compensación Familiar de Boyacá – Comfaboy</div>
-        <ul class="job-bullets">
-          <li>Diseñé e implementé arquitecturas analíticas, dashboards interactivos y modelos de datos utilizando Power BI, Power Query y DAX.</li>
-          <li>Lideré programas de formación en Business Intelligence e IA para más de 100 profesionales, logrando que el 85% creara modelos de analítica funcional.</li>
-          <li>Estructuré indicadores clave (KPIs) y guías metodológicas para la evaluación del rendimiento de productos y crecimiento empresarial.</li>
-        </ul>
-      </div>
+        <div class="project">
+          <b>Formación en Power BI + IA</b>
+          <span>Diseño e impartición de formación práctica con proyectos de dashboards funcionales.</span>
+          <div class="metric">85% de participantes construyeron dashboards funcionales</div>
+        </div>
+      </article>
 
-      <div class="job-item">
-        <div class="job-header">
-          <span class="job-title">Consultor en Asesoría Estratégica</span>
-          <span class="job-date">Nov 2024 – May 2026</span>
+      <article class="card">
+        <h3>🚚 Supply Chain & Planeación</h3>
+        <p>Experiencia en planeación de abastecimiento, MRP, forecast, inventarios y coordinación de operaciones para diferentes mercados.</p>
+        <div class="project">
+          <b>Planeación multi país</b>
+          <span>Gestión del abastecimiento y reabastecimiento para Colombia, Perú, Bolivia y Guatemala, entre otros mercados.</span>
         </div>
-        <div class="job-company">PROPAIS – Bogotá</div>
-        <ul class="job-bullets">
-          <li>Asesoré a más de 300 unidades productivas mediante diagnósticos empresariales y planes estratégicos (más del 70% implementó mejoras).</li>
-          <li>Diseñé estrategias de optimización en abastecimiento e inventarios, reduciendo costos operativos en promedio un 12%.</li>
-          <li>Estructuré y monitoreé tableros de KPIs para mejorar el forecast de ventas y la planeación de demanda.</li>
-        </ul>
-      </div>
+        <div class="project">
+          <b>Optimización de inventarios</b>
+          <span>Aplicación de ABC, pronósticos y análisis de cobertura para mejorar disponibilidad y capital de trabajo.</span>
+          <div class="metric">Inventario -10% · stock acumulado -15% · capital inmovilizado -20%</div>
+        </div>
+      </article>
 
-      <div class="job-item">
-        <div class="job-header">
-          <span class="job-title">Gestor de Proyectos</span>
-          <span class="job-date">Nov 2023 – Abril 2025</span>
+      <article class="card">
+        <h3>🤝 Compras & Proveedores</h3>
+        <p>Compras estratégicas nacionales e internacionales, negociación, seguimiento de proveedores y control de costos.</p>
+        <div class="project">
+          <b>Gestión de compras</b>
+          <span>Planeación de requerimientos, negociación, evaluación y seguimiento de proveedores.</span>
+          <div class="metric">Compras gestionadas: COP 5–20 mil millones/año · ahorros 2–7%</div>
         </div>
-        <div class="job-company">Fundación La Nueva Sagazuca – Madrid, Cund.</div>
-        <ul class="job-bullets">
-          <li>Diseñé un sistema integral de abastecimiento, inventarios y proveedores, optimizando costos operativos y disponibilidad de materias primas.</li>
-          <li>Implementé modelos de forecasting y evaluación de proyectos con indicadores de impacto.</li>
-        </ul>
-      </div>
+        <div class="project">
+          <b>Control de abastecimiento</b>
+          <span>Integración entre demanda, compras, inventario y logística para asegurar continuidad operativa.</span>
+        </div>
+      </article>
 
-      <div class="job-item">
-        <div class="job-header">
-          <span class="job-title">Analista de Planificación Estratégica y Compras</span>
-          <span class="job-date">Dic 2019 – Oct 2023</span>
+      <article class="card">
+        <h3>💡 Consultoría & Mejoramiento</h3>
+        <p>Acompañamiento a unidades productivas, emprendimientos, microempresas y pymes en diagnóstico, costos, abastecimiento, indicadores y estrategias de crecimiento.</p>
+        <div class="project">
+          <b>Consultoría empresarial</b>
+          <span>Más de 500 unidades productivas y emprendimientos asesorados en fortalecimiento empresarial.</span>
+          <div class="metric">Costos/abastecimiento/inventarios -12% · eficiencia >10%</div>
         </div>
-        <div class="job-company">AZZORTI – LATAM</div>
-        <ul class="job-bullets">
-          <li>Lideré la planeación de abastecimiento para Colombia, Perú, Ecuador, Bolivia y Guatemala para más de 3.000 referencias.</li>
-          <li>Diseñé modelos de Forecast y MRP, logrando reducir costos de inventario en un 10% e incrementar la rotación en un 15%.</li>
-          <li>Monitoreé indicadores clave de abastecimiento: OTIF, Fill Rate, Nivel de Servicio y Cobertura mediante Power BI y SAP.</li>
-        </ul>
-      </div>
+        <div class="project">
+          <b>Lean / Kaizen</b>
+          <span>Implementación de iniciativas de mejora, medición de productividad y seguimiento mediante indicadores.</span>
+        </div>
+      </article>
 
-      <div class="job-item">
-        <div class="job-header">
-          <span class="job-title">Coordinador de Procesos Logísticos</span>
-          <span class="job-date">Sep 2018 – Nov 2019</span>
-        </div>
-        <div class="job-company">Movistar Arena – Bogotá</div>
-        <ul class="job-bullets">
-          <li>Coordiné operaciones logísticas para eventos masivos liderando equipos de más de 50 personas.</li>
-          <li>Optimicé el control de inventarios reduciendo el desperdicio en un 20%.</li>
-        </ul>
-      </div>
+      <article class="card wide">
+        <h3>🧰 Herramientas y metodologías</h3>
+        <p><b>Excel avanzado · Power Query · Power BI · DAX · SQL · Python · SAP · WMS · MS Project · Forecasting · MRP · S&amp;OP · CPFR · ABC · Lean · Kaizen · Six Sigma · PMI</b></p>
+      </article>
     </section>
 
-    <!-- COMPETENCIAS TÉCNICAS Y EDUCACIÓN -->
-    <section class="card">
-      <h2>Competencias & Formación</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>📊 Sistemas & Analítica</h3>
-          <p>
-            <span class="badge">Power BI</span>
-            <span class="badge">Power Query</span>
-            <span class="badge">DAX</span>
-            <span class="badge">Excel Avanzado</span>
-            <span class="badge">SAP (MM / PP)</span>
-            <span class="badge">Python</span>
-            <span class="badge">Modelado ETL</span>
-          </p>
-        </div>
-
-        <div class="skill-card">
-          <h3>📦 Supply Chain & Logística</h3>
-          <p>
-            <span class="badge">S&OE</span>
-            <span class="badge">Forecasting</span>
-            <span class="badge">Ejecución MRP</span>
-            <span class="badge">KPIs (OTIF, Fill Rate)</span>
-            <span class="badge">Gestión de Inventarios</span>
-            <span class="badge">Compras Estratégicas</span>
-          </p>
-        </div>
-
-        <div class="skill-card">
-          <h3>🎓 Educación & Certificaciones</h3>
-          <p><strong>Ingeniería Industrial</strong><br><small>Universidad de Cundinamarca</small></p>
-          <p style="margin-top:8px;"><strong>Especialización en Gerencia de Proyectos</strong><br><small>Universidad EAN</small></p>
-          <p style="margin-top:8px;"><small>Certificado en PMI, Power BI y Liderazgo Efectivo.</small></p>
-        </div>
-      </div>
-    </section>
-
-  </div>
+    <div class="footer">Portafolio ejecutivo · Edwin Ahumada · Análisis de datos · Supply Chain · Compras · Consultoría</div>
+  </main>
 </body>
 </html>
